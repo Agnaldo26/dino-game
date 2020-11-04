@@ -44,6 +44,18 @@ function createCactus(){
     cactus.classList.add('cactus');
     cactus.style.left = cactusPosition +'px'
     background.appendChild(cactus);
+
+    let leftInterval = setInterval (() => {
+        currentPosition = 5;
+        cactusPosition -= currentPosition +1;
+        cactus.style.left = cactusPosition + 'px';
+
+        if(cactusPosition < -60){
+            clearInterval(leftInterval);
+                background.removeChild(cactus)
+        }
+
+    },20);
 }
 
 createCactus();
