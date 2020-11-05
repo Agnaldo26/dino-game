@@ -28,20 +28,20 @@ function jump(){
                 } else{
                     position -= 20;
                     dino.style.bottom = position + "px"}  
-            },40)
+            },20)
        
         } else{
             //Subindo
             position += 20;
             dino.style.bottom = position +'px'}
 
-    },10);
+    },20);
 }
 
 function createCactus(){
     const cactus = document.createElement('div')
     let cactusPosition = 1000;
-    let randomTime = Math.random() * 4000;
+    let randomTime = Math.random() * 6000;
 
 
     cactus.classList.add('cactus');
@@ -59,8 +59,7 @@ function createCactus(){
             clearInterval(leftInterval);
             document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';
         } else {
-            currentPosition = 7;
-            cactusPosition -= currentPosition +1;
+            cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
         }
 
